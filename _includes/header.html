@@ -2,7 +2,7 @@
 
   <div class="wrapper">
 
-    <a class="site-title" href="{{ "/" | relative_url}}">{{ site.title | escape }}</a>
+   <!--  <a class="site-title" href="{{ "/" | relative_url}}">{{ site.title | escape }}</a> -->
 
     <nav class="site-nav">
       <span class="menu-icon">
@@ -13,19 +13,18 @@
         </svg>
       </span>
 
-      <ul class="site-nav flex">
-        <li>about</li>
-        <li>work</li>
-        <li>contact</li>
-      </ul>
-
-      <div class="trigger">
+      <ul class="site-nav">
         {% for my_page in site.pages %}
           {% if my_page.title %}
-          <a class="page-link" href="{{ my_page.url | relative_url }}">{{ my_page.title | escape }}</a>
+           <li><a class="page-link" href="{{ my_page.url | relative_url }}">{{ my_page.title | escape }}</a></li> 
+           <li><a class="page-link" href="{{ my_page.url | relative_url }}">{{ my_page.title | escape }}</a></li>
+           <li class="logo">
+             <img src="https://unsplash.it/150/150/?random" alt="">
+           </li>
+           <li><a class="page-link" href="{{ my_page.url | relative_url }}">{{ my_page.title | escape }}</a></li>
           {% endif %}
         {% endfor %}
-      </div>
+         </ul>
     </nav>
 
   </div>

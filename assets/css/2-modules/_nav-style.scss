@@ -1,0 +1,46 @@
+//Flex
+.site-nav{
+	background: $primary-color;
+	display:flex;
+	flex-flow:row nowrap;
+	justify-content:flex-start;
+	padding:0;
+	align-items:center;
+
+}
+
+.site-nav li{
+
+	padding:0 1em;
+	display:none;
+}
+
+.site-nav li a{
+
+	display:block;
+	color:$text-color;
+}
+
+li.logo{
+	order:-1;	
+}
+
+.menu-icon{
+	order:1;
+	}
+
+/* Large screens */
+@media all and (min-width: 600px) {
+  .menu-icon{
+	display:none;
+	}
+
+	li.logo{
+		order:0;	
+		flex:1;
+	}
+
+	.site-nav{
+		justify-content:center;
+	}
+}
