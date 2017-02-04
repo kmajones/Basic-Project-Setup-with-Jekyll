@@ -1,14 +1,53 @@
-.flex{
-display:flex;
-flex-flow: row wrap;
-justify-content:space-around;
+.wrapper > * {
+  padding: 0 30px;
+  flex: 1 100%;
 }
 
-.item{
-	
+.wrapper{
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;  
+  
+  -webkit-flex-flow: row wrap;
+  flex-flow: row wrap;
+  
+  font-weight: bold;
+  text-align: center;
+}
+
+//set everything to 100% w
+.header,.thumbnail, .main, .nav, .aside, .footer {
+  flex: 1 100%;
 }
 
 
-.main{
-	flex: 2 0px;
+// Flex Classes
+
+.flex--center{
+justify-content: center;}
+
+.flex--space-around{
+justify-content: space-around;}
+
+.order-first{
+order: -1;}
+
+
+//Layout - default
+.aside { flex: 1 auto; }
+
+
+//media queries
+
+/* Large screens */
+@media all and (min-width: 800px) {
+  /* We invert order of first sidebar and main
+   * And tell the main element to take twice as much width as the other two sidebars 
+   */
+
+  .thumbnail { 	flex:1;}
+  .main {	 flex:3; }
+
 }
