@@ -1,9 +1,9 @@
 .wrapper > * {
-  padding: 0 30px;
+  padding: 0;
   flex: 1 100%;
 }
 
-.wrapper{
+.intro, .portfolio, .services, .makethings-intro, .thinkthoughts{
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -18,10 +18,9 @@
 }
 
 //set everything to 100% w
-.header,.thumbnail, .main, .nav, .aside, .footer {
+.header,.thumbnail, .main, .nav, .aside, .footer, .services, .portfolio {
   flex: 1 100%;
 }
-
 
 // Flex Classes
 
@@ -34,10 +33,34 @@ justify-content: space-around;}
 .order-first{
 order: -1;}
 
+.flex-container {
+    flex: 0 1 auto;
+    background-color:red;
+    display: flex;
+    flex-flow: row wrap;
+    
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    border: 1px solid silver;
+}
+
+.flex-group {
+justify-content: center;
+}
 
 //Layout - default
-.aside { flex: 1 auto; }
+.aside { flex: 1 auto; 
+}
 
+// Margin and Padding 
+article, aside{
+  padding:0 2em;
+}
+
+p{
+  padding:1em;
+}
 
 //media queries
 
@@ -47,7 +70,51 @@ order: -1;}
    * And tell the main element to take twice as much width as the other two sidebars 
    */
 
-  .thumbnail { 	flex:1;}
-  .main {	 flex:3; }
+
+
+//Flex
+
+.thumbnail {  flex:1;}
+.col-1{flex:1;}
+.main{ flex:1; }
+
+.flex-container {
+  flex: 1;
+  display: flex;
+
+  justify-content:space-between;
+  align-items:flex-start;
+  
+  padding: 0;
+  margin: 0;
+}
+
+.flex-group {
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+
+.flex-item {
+    flex: 1;
+    background-color:yellow;
+}
+
+
+.flex-services {
+    display:flex;
+    align-items: center;
+    width:100%;
+    min-width: 200px;
+    max-width: 600px;
+    flex-basis: auto; /* default value */
+    flex-grow: 1;
+}
+
+.flex-services img{
+    flex-grow:0;
+    flex-shrink:0;
+}
 
 }
